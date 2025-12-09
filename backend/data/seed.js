@@ -93,8 +93,8 @@ const seedData = [
   },
   {
     name: "psoriasis",
-    keywords: ["Psoriasis"],
-    condition: "Psoriasis",
+    keywords: ["psoriasis","Psoriasis"],
+    condition: "psoriasis",
     doctors: [
       {
         name: "Dr. Mouma Barik",
@@ -135,8 +135,8 @@ const seedData = [
     ]
   },
   {
-    name: "Ringworm",
-    keywords: ["Ringworm"],
+    name: "ringworm",
+    keywords: ["ringworm","Ringworm"],
     condition: "Ringworm (Fungal Infection)",
     doctors: [
      
@@ -179,8 +179,8 @@ const seedData = [
     ]
   },
   {
-    name: "Roseacea",
-    keywords: ["Roseacea"],
+    name:  "rosacea",
+    keywords: [ "rosacea","Rosacea"],
     condition: "Roseacea",
     doctors: [
      
@@ -222,12 +222,38 @@ const seedData = [
       }
     ]
   },
-  {
-    name: "Contact Dermatitis",
-    keywords: ["Contact Dermatitis"],
-    condition: "Contact Dermatitis",
+ {
+    name: "contact_dermatitis",
+    keywords: ["contact_dermatitis","Contact_Dermatitis"],
+    condition: "Contact_Dermatitis",
     doctors: [
-     
+      {
+        name: "Dr. sourav ghosh",
+        specialization: "Immunologist",
+        experience: "7 years",
+        hospital: "Apollo Hospital",
+        location: "Bengaluru",
+        contact: "XXXXXXXXXX",
+        rating: 4.8
+      },
+      {
+        name: "Dr. hardik mehta",
+        specialization: "Immunologist",
+        experience: "5 years",
+        hospital: "Manipal Hospital",
+        location: "Mumbai",
+        contact: "XXXXXXXXXX",
+        rating: 4.8
+      },
+      {
+        name: "Dr. Kamal Hasan",
+        specialization: "Dermatologist",
+        experience: "10 years",
+        hospital: "BLK-Max Super Speciality Hospital",
+        location: "Delhi",
+        contact: "XXXXXXXXXX",
+        rating: 4.7
+      },
       {
         name: "Dr. Mouma Barik",
         specialization: "Dermatologist",
@@ -237,38 +263,11 @@ const seedData = [
         contact: "XXXXXXXXXX",
         rating: 4.5
       },
-      {
-        name: "Dr. Avilasa Maji",
-        specialization: "Allergist",
-        experience: "8 years",
-        hospital: "Max Super Speciality Hospital",
-        location: "Delhi",
-        contact: "XXXXXXXXXX",
-        rating: 4.2
-      },
-      {
-        name: "Dr. Ashmi Saha",
-        specialization: "Dermatologist",
-        experience: "16 years",
-        hospital: "Narayana Hospital",
-        location: "Bangalore",
-        contact: "XXXXXXXXXX",
-        rating: 4.0
-      },
-      {
-        name: "Dr. Sirsan Das",
-        specialization: "Allergist",
-        experience: "6 years",
-        hospital: "Manipal Hospital",
-        location: "Mumbai",
-        contact: "XXXXXXXXXX",
-        rating: 4.0
-      }
     ]
   },
   {
-    name: "Hives",
-    keywords: ["Hives"],
+    name: "hives",
+    keywords: ["hives","Hives"],
     condition: "Hives (Urticaria)",
     doctors: [
      
@@ -311,8 +310,8 @@ const seedData = [
     ]
   },
   {
-    name: "Melanoma",
-    keywords: ["Melanoma"],
+    name: "melanoma",
+    keywords: ["melanoma","Melanoma"],
     condition: "Melanoma (Skin Cancer)",
     doctors: [
      
@@ -355,9 +354,9 @@ const seedData = [
     ]
   },
   {
-    name: "Warts",
-    keywords: ["Warts"],
-    condition: "Warts",
+    name: "warts",
+    keywords: ["warts","Warts"],
+    condition: "warts",
     doctors: [
      
       {
@@ -399,8 +398,8 @@ const seedData = [
     ]
   },
   {
-    name: "Vitiligo",
-    keywords: ["Vitiligo"],
+    name: "vitiligo",
+    keywords: ["vitiligo","Vitiligo"],
     condition: "Vitiligo",
     doctors: [
      
