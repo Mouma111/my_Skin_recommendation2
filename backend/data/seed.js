@@ -232,7 +232,7 @@ const seedData = [
         specialization: "Immunologist",
         experience: "7 years",
         hospital: "Apollo Hospital",
-        location: "Bengaluru",
+        location: "Bangalore",
         contact: "XXXXXXXXXX",
         rating: 4.8
       },

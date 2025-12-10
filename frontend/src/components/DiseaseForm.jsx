@@ -25,31 +25,32 @@ function DiseaseForm({ onResult }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const res = await axios.post(
-      "http://localhost:5000/api/ml/predict",
-      form
-    );
-
-    onResult(res.data);
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/ml/predict",
+        form
+      );
+      onResult(res.data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
-    <div style={{ background: "#ffffff", padding: "36px", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)", border: "1px solid #e5e7eb", width: "100%", maxWidth: "1000px" }}>
-      <h3 style={{ margin: "0 0 24px 0", color: "#5b6bf0", fontSize: "18px", fontWeight: "600" }}>Enter Symptoms</h3>
-
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    <div style={{ background: "#ffffff", padding: "36px", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)" }}>
+      <h3 style={{ margin: "0 0 24px 0", color: "#5b6bf0" }}>Enter Your Symptoms</h3>
+      <form onSubmit={handleSubmit} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "12px", marginBottom: "16px" }}>
         {Object.keys(form).map((field) => (
           <input
             key={field}
-            placeholder={field}
+            placeholder={field.replace(/_/g, " ")}
             name={field}
             value={form[field]}
             onChange={handleChange}
+            type={field.includes("age") || field.includes("days") ? "number" : "text"}
           />
         ))}
-
-        <button type="submit" style={{ marginTop: "16px", padding: "11px 18px", background: "#5b6bf0", color: "white", border: "none", borderRadius: "8px", fontWeight: "600", cursor: "pointer", fontSize: "14px" }}>Detect Disease</button>
+        <button type="submit" style={{ gridColumn: "1 / -1", padding: "11px 18px", background: "#5b6bf0", color: "white", border: "none", borderRadius: "8px", cursor: "pointer", fontWeight: "600" }}>Detect Disease</button>
       </form>
     </div>
   );
